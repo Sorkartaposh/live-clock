@@ -1,0 +1,150 @@
+/*
+====================================
+Medium Screen - Others
+====================================
+*/
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+====================================
+Small Screen - Tablate
+====================================
+*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .cweb-area {
+        align-items: flex-start;
+        padding:20px 0;
+    }
+    .ripple {
+        margin-top:200px;
+    }
+    .cweb-header p,
+    .cweb-header p a {
+        margin-bottom:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+====================================
+Small Screen - Mobile
+====================================
+*/
+@media screen and (min-width: 576px) and (max-width: 767px) {	
+    .cweb-area {
+        align-items: flex-start;
+        padding:20px 0;
+    }
+    .ripple {
+        margin-top:200px;
+    }
+    .cweb-header p,
+    .cweb-header p a {
+        margin-bottom:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+====================================
+Xtra Small Screen - Small Mobile
+====================================
+*/
+@media screen and (max-width: 576px) {
+    .cweb-area {
+        align-items: flex-start;
+        padding:20px 0;
+    }
+    .ripple {
+        margin-top:200px;
+    }
+    .cweb-header p,
+    .cweb-header p a {
+        margin-bottom:20px;
+    }
+
+
+
+    
+}

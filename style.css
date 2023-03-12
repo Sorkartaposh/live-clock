@@ -1,0 +1,172 @@
+/*
+========================
+clock web page start
+========================
+*/
+
+body {	
+    font-family: 'sf_pro_display';
+    font-size: 20px;
+    font-weight: 400;
+    background-color:#1e1e1e;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    color: white; 
+    background: #ff7675;
+}
+
+::-webkit-selection {
+    color: white; 
+    background: #ff7675;
+}
+
+::-moz-selection {
+    color: white; 
+    background: #ff7675;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    background: rgba(0,0,0,.5);   
+    text-align: center;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+}
+
+.scrolltotop:hover {   
+    background: #000;
+    color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.5);   
+}
+.cweb-area {
+    display: flex;
+    align-items: center;
+    height:100vh;
+    overflow-x:hidden;
+}
+
+.cweb-header p,
+.cweb-header p a {
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom:80px;
+    text-decoration:none;
+    position: relative;
+}
+.ripple {
+    margin: auto;
+    margin-top: 70px;
+    background: rgba(182, 182, 182, 0.7);
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    position: relative;
+    animation: ripple 3s linear infinite
+}
+.r-active {
+    background: rgba(182, 182, 182,1);
+}
+
+.ripple::before,
+.ripple::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    animation: ripple 3s linear infinite 1s;
+}
+
+.ripple::after {
+    animation: ripple 3s linear infinite 2s;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 2rem #696969;
+    }
+
+    100% {
+        box-shadow: 0 0 0 7rem rgba(255, 255, 255, 0)
+    }
+}
+
+.cweb-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cweb-item h6 {
+    font-style: 400;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.cweb-footer {
+    text-align: center;
+}
+.cweb-footer a {
+    color: #FFFFFF;
+    font-style: 400;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 160px;
+    text-decoration: none;
+    position: relative;
+}
+.cweb-footer a:after {
+    content: '';
+    display:inline-block;
+    width:100%;
+    height:2px;
+    background-color: #fff;
+    position: absolute;
+    top:100%;
+    left: 0;
+}
+.cweb-header p a:after {
+    content: '';
+    display:inline-block;
+    width:100%;
+    height:2px;
+    background-color: #fff;
+    position: absolute;
+    top:100%;
+    left: 0;
+}
+
+
+
+
+
+
+
+

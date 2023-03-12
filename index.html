@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Meta setup -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="">
+		<meta name="decription" content="">
+		
+		<!-- Title -->
+		<title>Welcome</title>
+		<!-- Fav Icon -->
+		<link rel="icon" href="img/favicon.ico" />	
+
+		<!-- Include Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		
+		<!-- Main StyleSheet -->
+		<link rel="stylesheet" href="style.css" />	
+		<link rel="stylesheet" href="fonts/fonts.css">
+		
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/responsive.css" />	
+		
+	</head>
+	<body>
+
+		<!-- clock web page start -->
+		<section class="cweb-area">
+			<div class="container">
+				<div class="cweb-header">
+					<p>Enjoy the present <a href="#">while you're here!</a></p>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="cweb-item ripple">
+							<h6 id="liveday"></h6>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="cweb-item ripple">
+							<h6 id="livemonth"></h6> &nbsp;
+							<h6 id="livedte"></h6>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="cweb-item ripple r-active">
+							<h6 id="clock"></h6>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="cweb-item ripple">
+							<h6 id="liveyear"></h6>
+						</div>
+					</div>
+				</div>
+				<div class="cweb-footer">
+					<a href="#">Now is the only time you will ever have!</a>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			// live year
+			const d = new Date();
+			let year = d.getFullYear();
+			document.getElementById("liveyear").innerHTML = year;
+
+			// live weekly
+			const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+			// live day
+			const w = new Date();
+			let day = days[w.getDay()];
+			document.getElementById("liveday").innerHTML = day;
+			
+			// live month
+			const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+			const m = new Date("2021-03-25");
+			let month = months[m.getMonth()];
+			document.getElementById("livemonth").innerHTML = month;
+
+			// live date
+			const dte = new Date();
+			document.getElementById("livedte").innerHTML = dte.getDate();
+
+			// *************live time*********************
+			function updateTime() {
+			try {
+				// Create a new Date object to get the current date and time in the local time zone
+				let now = new Date();
+
+				// Get the formatted time string for the current time in the local time zone, with AM/PM format
+				let timeString = now.toLocaleTimeString(undefined, {hour12: true});
+
+				// Set the text of the clock element to the formatted time string
+				let clockElement = document.getElementById("clock");
+				if (clockElement) {
+					clockElement.innerText = timeString;
+				} else {
+					console.error("Could not find clock element!");
+				}
+			} catch (error) {
+				console.error("Error updating time:", error);
+			}
+		}
+
+		// Call the updateTime function immediately to update the clock right away
+		updateTime();
+
+		// Call the updateTime function every second to update the clock
+		setInterval(updateTime, 1000);
+		</script>
+	</body>
+</html>
